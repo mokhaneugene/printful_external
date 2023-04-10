@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		443D6BC629E4008B00416579 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443D6BC529E4008B00416579 /* AppDelegate.swift */; };
-		443D6BCA29E4008B00416579 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443D6BC929E4008B00416579 /* ViewController.swift */; };
 		443D6BCF29E4008C00416579 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 443D6BCE29E4008C00416579 /* Assets.xcassets */; };
 		443D6BD229E4008C00416579 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443D6BD029E4008C00416579 /* LaunchScreen.storyboard */; };
 		443D6BDB29E401FD00416579 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 443D6BDA29E401FD00416579 /* SnapKit-Dynamic */; };
 		443D6BDE29E4020700416579 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 443D6BDD29E4020700416579 /* Kingfisher */; };
+		443D6BE229E45D1200416579 /* Services in Frameworks */ = {isa = PBXBuildFile; productRef = 443D6BE129E45D1200416579 /* Services */; };
+		443D6BE529E4A7F700416579 /* CategoriesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443D6BE429E4A7F700416579 /* CategoriesFactory.swift */; };
+		443D6BE729E4A85A00416579 /* CategoriesResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443D6BE629E4A85A00416579 /* CategoriesResources.swift */; };
+		443D6BE929E4A88600416579 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443D6BE829E4A88600416579 /* CategoriesViewModel.swift */; };
+		443D6BEB29E4A8FE00416579 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443D6BEA29E4A8FE00416579 /* CategoriesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		443D6BC229E4008B00416579 /* printful_external.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = printful_external.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		443D6BC529E4008B00416579 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		443D6BC929E4008B00416579 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		443D6BCE29E4008C00416579 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		443D6BD129E4008C00416579 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		443D6BD329E4008C00416579 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		443D6BDF29E4275B00416579 /* Services */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Services; sourceTree = "<group>"; };
+		443D6BE429E4A7F700416579 /* CategoriesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesFactory.swift; sourceTree = "<group>"; };
+		443D6BE629E4A85A00416579 /* CategoriesResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesResources.swift; sourceTree = "<group>"; };
+		443D6BE829E4A88600416579 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
+		443D6BEA29E4A8FE00416579 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				443D6BE229E45D1200416579 /* Services in Frameworks */,
 				443D6BDE29E4020700416579 /* Kingfisher in Frameworks */,
 				443D6BDB29E401FD00416579 /* SnapKit-Dynamic in Frameworks */,
 			);
@@ -41,7 +50,9 @@
 			isa = PBXGroup;
 			children = (
 				443D6BC429E4008B00416579 /* printful_external */,
+				443D6BDF29E4275B00416579 /* Services */,
 				443D6BC329E4008B00416579 /* Products */,
+				443D6BE029E45D1200416579 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,12 +68,30 @@
 			isa = PBXGroup;
 			children = (
 				443D6BC529E4008B00416579 /* AppDelegate.swift */,
-				443D6BC929E4008B00416579 /* ViewController.swift */,
+				443D6BE329E4A7CD00416579 /* CategoriesViewController */,
 				443D6BCE29E4008C00416579 /* Assets.xcassets */,
 				443D6BD029E4008C00416579 /* LaunchScreen.storyboard */,
 				443D6BD329E4008C00416579 /* Info.plist */,
 			);
 			path = printful_external;
+			sourceTree = "<group>";
+		};
+		443D6BE029E45D1200416579 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		443D6BE329E4A7CD00416579 /* CategoriesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				443D6BE429E4A7F700416579 /* CategoriesFactory.swift */,
+				443D6BE629E4A85A00416579 /* CategoriesResources.swift */,
+				443D6BE829E4A88600416579 /* CategoriesViewModel.swift */,
+				443D6BEA29E4A8FE00416579 /* CategoriesViewController.swift */,
+			);
+			path = CategoriesViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +113,7 @@
 			packageProductDependencies = (
 				443D6BDA29E401FD00416579 /* SnapKit-Dynamic */,
 				443D6BDD29E4020700416579 /* Kingfisher */,
+				443D6BE129E45D1200416579 /* Services */,
 			);
 			productName = printful_external;
 			productReference = 443D6BC229E4008B00416579 /* printful_external.app */;
@@ -143,8 +173,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				443D6BCA29E4008B00416579 /* ViewController.swift in Sources */,
+				443D6BE729E4A85A00416579 /* CategoriesResources.swift in Sources */,
+				443D6BEB29E4A8FE00416579 /* CategoriesViewController.swift in Sources */,
+				443D6BE929E4A88600416579 /* CategoriesViewModel.swift in Sources */,
 				443D6BC629E4008B00416579 /* AppDelegate.swift in Sources */,
+				443D6BE529E4A7F700416579 /* CategoriesFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +423,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 443D6BDC29E4020700416579 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		443D6BE129E45D1200416579 /* Services */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Services;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
