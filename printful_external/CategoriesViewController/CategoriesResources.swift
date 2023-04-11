@@ -14,7 +14,9 @@ struct CategoriesResources {
     }
 
     enum State {
-
+        case onDataReady(Bool)
+        case onError(String)
+        case onCollectionViewModel(CategoriesCollectionViewModelling)
     }
 
     enum Constants {

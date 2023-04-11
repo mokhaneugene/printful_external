@@ -14,6 +14,8 @@ final class CategoriesViewController: UIViewController {
 
     // MARK: - Private
 
+    private let collectionView = CategoriesCollectionView()
+
     private var viewModel: CategoriesViewModelling?
 
     // MARK: - LifeCycle
@@ -36,13 +38,43 @@ final class CategoriesViewController: UIViewController {
 private extension CategoriesViewController {
     func setupItems() {
         view.backgroundColor = .white
+        setupCollectionView()
     }
 
     func setupViewModel() {
         viewModel?.onStateChange = { [weak self] state in
             guard let self = self else { return }
 
+            switch state {
+            case .onDataReady(let isDataReady):
+                // TODO: - Add loading spinner
+                print("isDataReady: \(isDataReady)")
+            case .onError(let error):
+                // TODO: - Add error view
+                print("Error: \(error)")
+            case .onCollectionViewModel(let viewModel):
+                self.collectionView.configure(with: viewModel)
+            }
         }
         viewModel?.launch()
+    }
+
+    func setupCollectionView() {
+        view.addSubview(collectionView)
+        collectionView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+    }
+}
+
+// MARK: - UICollectionViewDataSource
+
+extension CategoriesViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return .init()
     }
 }
